@@ -1,13 +1,18 @@
-import { createRouter, createWebhistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
-import StoreFront from './components/StoreFront.vue';
-import DetailPage from './components/DetailPage.vue';
+import Home from './views/Home.vue';
+import Detail from './views/Detail.vue';
 
 const routes = [
     {
         path: "/",
         name: "home",
-        component: StoreFront
+        component: Home
+    },
+    {
+        path: "/products/:id",
+        name: "product",
+        component: Detail
     }
 ];
 
