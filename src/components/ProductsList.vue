@@ -23,6 +23,7 @@ export default {
             :title="product.title"
             :img="product.image"
             :price="product.price"
+            :id="product.id"
             />
     </main>
     <main v-else>

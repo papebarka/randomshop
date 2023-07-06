@@ -1,6 +1,6 @@
 <script>
     export default {
-        props: ['title', 'img', 'price'],
+        props: ['title', 'img', 'price', 'id'],
         data() {
             return {
 
@@ -19,7 +19,11 @@
             <div class="product-card-price">
                 <p>${{ price }}</p>
             </div>
-
+            <div class="product-card-display-link">
+                <router-link :to="{ name: 'product', params: {id: id} }">
+                    VOIR
+                </router-link>
+            </div>
         </div>
     </div>
 </template>
